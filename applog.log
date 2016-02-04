@@ -1,0 +1,67 @@
+2016-02-04 13:47:08,615 - LocaleGreetingTest - INFO - --------------------------------Start-----------------------------------
+2016-02-04 13:47:08,706 - LocaleGreetingTest - INFO - Number of testcases to execute : 1
+2016-02-04 13:47:08,715 - LocaleGreetingTest - INFO - Starting execution of test case : testIllegalArgumentException
+2016-02-04 13:47:08,737 - LocaleGreetingTest - INFO - Execution of test case failed : Expected exception: java.lang.IllegalArgumentException
+2016-02-04 13:47:08,738 - LocaleGreetingTest - INFO - Finished execution of test case : testIllegalArgumentException
+2016-02-04 13:47:08,739 - LocaleGreetingTest - INFO - Number of testcases executed : 1
+2016-02-04 13:47:08,739 - LocaleGreetingTest - INFO - -------------------------------Summary----------------------------------
+2016-02-04 13:47:08,739 - LocaleGreetingTest - INFO - Run tests: 1
+2016-02-04 13:47:08,739 - LocaleGreetingTest - INFO - Failed tests: 1
+2016-02-04 13:47:08,740 - LocaleGreetingTest - INFO - Ignored tests: 0
+2016-02-04 13:47:08,740 - LocaleGreetingTest - INFO - Success: false
+2016-02-04 13:47:08,740 - LocaleGreetingTest - INFO - ---------------------------------END------------------------------------
+2016-02-04 13:48:19,137 - LocaleGreetingTest - INFO - --------------------------------Start-----------------------------------
+2016-02-04 13:48:19,238 - LocaleGreetingTest - INFO - Number of testcases to execute : 1
+2016-02-04 13:48:19,244 - LocaleGreetingTest - INFO - Starting execution of test case : testIllegalArgumentException
+2016-02-04 13:48:19,257 - LocaleGreetingTest - INFO - Finished execution of test case : testIllegalArgumentException
+2016-02-04 13:48:19,258 - LocaleGreetingTest - INFO - Number of testcases executed : 1
+2016-02-04 13:48:19,258 - LocaleGreetingTest - INFO - -------------------------------Summary----------------------------------
+2016-02-04 13:48:19,258 - LocaleGreetingTest - INFO - Run tests: 1
+2016-02-04 13:48:19,259 - LocaleGreetingTest - INFO - Failed tests: 0
+2016-02-04 13:48:19,259 - LocaleGreetingTest - INFO - Ignored tests: 0
+2016-02-04 13:48:19,260 - LocaleGreetingTest - INFO - Success: true
+2016-02-04 13:48:19,260 - LocaleGreetingTest - INFO - ---------------------------------END------------------------------------
+2016-02-04 13:50:38,128 - LocaleGreetingTest - INFO - --------------------------------Start-----------------------------------
+2016-02-04 13:50:38,218 - LocaleGreetingTest - INFO - Number of testcases to execute : 1
+2016-02-04 13:50:38,223 - LocaleGreetingTest - INFO - Starting execution of test case : testIllegalArgumentException
+2016-02-04 13:50:38,237 - LocaleGreetingTest - INFO - Finished execution of test case : testIllegalArgumentException
+2016-02-04 13:50:38,238 - LocaleGreetingTest - INFO - Number of testcases executed : 1
+2016-02-04 13:50:38,238 - LocaleGreetingTest - INFO - -------------------------------Summary----------------------------------
+2016-02-04 13:50:38,238 - LocaleGreetingTest - INFO - Run tests: 1
+2016-02-04 13:50:38,238 - LocaleGreetingTest - INFO - Failed tests: 0
+2016-02-04 13:50:38,238 - LocaleGreetingTest - INFO - Ignored tests: 0
+2016-02-04 13:50:38,239 - LocaleGreetingTest - INFO - Success: true
+2016-02-04 13:50:38,239 - LocaleGreetingTest - INFO - ---------------------------------END------------------------------------
+2016-02-04 13:53:13,761 - LocaleGreetingTest - INFO - --------------------------------Start-----------------------------------
+2016-02-04 13:53:13,863 - LocaleGreetingTest - INFO - Number of testcases to execute : 1
+2016-02-04 13:53:13,869 - LocaleGreetingTest - INFO - Starting execution of test case : testIllegalArgumentException
+2016-02-04 13:53:13,882 - LocaleGreetingTest - INFO - Finished execution of test case : testIllegalArgumentException
+2016-02-04 13:53:13,883 - LocaleGreetingTest - INFO - Number of testcases executed : 1
+2016-02-04 13:53:13,884 - LocaleGreetingTest - INFO - -------------------------------Summary----------------------------------
+2016-02-04 13:53:13,884 - LocaleGreetingTest - INFO - Run tests: 1
+2016-02-04 13:53:13,884 - LocaleGreetingTest - INFO - Failed tests: 0
+2016-02-04 13:53:13,885 - LocaleGreetingTest - INFO - Ignored tests: 0
+2016-02-04 13:53:13,885 - LocaleGreetingTest - INFO - Success: true
+2016-02-04 13:53:13,885 - LocaleGreetingTest - INFO - ---------------------------------END------------------------------------
+2016-02-04 13:54:50,919 - LocaleGreetingTest - INFO - --------------------------------Start-----------------------------------
+2016-02-04 13:54:51,011 - LocaleGreetingTest - INFO - Number of testcases to execute : 1
+2016-02-04 13:54:51,016 - LocaleGreetingTest - INFO - Starting execution of test case : testIllegalArgumentException
+2016-02-04 13:54:51,029 - LocaleGreetingTest - INFO - Finished execution of test case : testIllegalArgumentException
+2016-02-04 13:54:51,030 - LocaleGreetingTest - INFO - Number of testcases executed : 1
+2016-02-04 13:54:51,031 - LocaleGreetingTest - INFO - -------------------------------Summary----------------------------------
+2016-02-04 13:54:51,031 - LocaleGreetingTest - INFO - Run tests: 1
+2016-02-04 13:54:51,032 - LocaleGreetingTest - INFO - Failed tests: 0
+2016-02-04 13:54:51,032 - LocaleGreetingTest - INFO - Ignored tests: 0
+2016-02-04 13:54:51,033 - LocaleGreetingTest - INFO - Success: true
+2016-02-04 13:54:51,033 - LocaleGreetingTest - INFO - ---------------------------------END------------------------------------
+2016-02-04 13:55:31,363 - LocaleGreetingTest - INFO - --------------------------------Start-----------------------------------
+2016-02-04 13:55:31,461 - LocaleGreetingTest - INFO - Number of testcases to execute : 1
+2016-02-04 13:55:31,467 - LocaleGreetingTest - INFO - Starting execution of test case : testIllegalArgumentException
+2016-02-04 13:55:31,481 - LocaleGreetingTest - INFO - Finished execution of test case : testIllegalArgumentException
+2016-02-04 13:55:31,482 - LocaleGreetingTest - INFO - Number of testcases executed : 1
+2016-02-04 13:55:31,482 - LocaleGreetingTest - INFO - -------------------------------Summary----------------------------------
+2016-02-04 13:55:31,482 - LocaleGreetingTest - INFO - Run tests: 1
+2016-02-04 13:55:31,485 - LocaleGreetingTest - INFO - Failed tests: 0
+2016-02-04 13:55:31,486 - LocaleGreetingTest - INFO - Ignored tests: 0
+2016-02-04 13:55:31,486 - LocaleGreetingTest - INFO - Success: true
+2016-02-04 13:55:31,486 - LocaleGreetingTest - INFO - ---------------------------------END------------------------------------
