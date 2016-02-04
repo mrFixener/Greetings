@@ -14,4 +14,5 @@ public interface PropertieKeys {
     public static final String DAY     = "day";
     public static final String EVANING = "evening";
     public static final String NIGHT   = "night";
+    public static final String LOCALE_FILE = "Greetings";
 }

@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 import com.greetings.LocaleGreeting;
+import static com.greetings.PropertieKeys.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -11,32 +14,30 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.apache.log4j.Logger;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 /**
  *
  * @author sdj
  */
 public class LocaleGreetingTest {
-    private ResourceBundle bundleByDefault;
     private ResourceBundle bundleRU;
     private ResourceBundle bundleUA;
     private ResourceBundle bundleUK;
-    private static final String greetingsResource = "Greetings";
+    private ResourceBundle bundleXX;
     public static Logger logger = Logger.getLogger(LocaleGreetingTest.class);
 
     public LocaleGreetingTest() {
     }
-
     @Before
     public void setUp() {
-        bundleByDefault = ResourceBundle.getBundle(greetingsResource, Locale.getDefault());
         Locale locale = new Locale("ru", "RU");
-        bundleRU = ResourceBundle.getBundle(greetingsResource, locale);
-
+        bundleRU = ResourceBundle.getBundle(LOCALE_FILE, locale);
         locale = new Locale("ua", "UA");
-        bundleUA = ResourceBundle.getBundle(greetingsResource, locale);
+        bundleUA = ResourceBundle.getBundle(LOCALE_FILE, locale);
 
-        locale = new Locale("uk", "UK");
-        bundleUK = ResourceBundle.getBundle(greetingsResource, locale);
+        locale = new Locale("en", "UK");
+        bundleUK = ResourceBundle.getBundle(LOCALE_FILE, locale);
     }
 
     @After
@@ -45,5 +46,182 @@ public class LocaleGreetingTest {
     @Test(expected = IllegalArgumentException.class)
     public void testIllegalArgumentException() {
         new LocaleGreeting(null).sayGreeting(new Date());
-    }  
+    } 
+    @Test
+    public void testRuLocaleSayMorning() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 06:00:00:000");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertEquals("The morning greeting with Ru locale must equals", bundleRU.getString(MORNING),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    @Test
+    public void testRuLocaleSayMorning2() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 09:00:00:000");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertNotEquals("It's not a morning greeting it's must be day", bundleRU.getString(MORNING),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    @Test
+    public void testRuLocaleSayMorning3() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 08:59:59:999");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertEquals("The morning greeting with Ru locale must equals", bundleRU.getString(MORNING),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    //Day
+    @Test
+    public void testRuLocaleSayDay() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 18:59:59:999");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertEquals("The day greeting with Ru locale must equals", bundleRU.getString(DAY),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    
+    @Test
+    public void testRuLocaleSayDay2() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 09:00:00:000");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertEquals("The day greeting with Ru locale must equals", bundleRU.getString(DAY),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    
+    @Test
+    public void testRuLocaleSayDay3() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 19:00:00:000");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertNotEquals("It's not a day greeting it's must be evening", bundleRU.getString(DAY),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+        assertEquals("It must be evening", bundleRU.getString(EVANING),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    
+    @Test
+    public void testRuLocaleSayDay4() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 17:03:15:419");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertEquals("The day greeting with Ru locale must equals", bundleRU.getString(DAY),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    
+    @Test
+    public void testRuLocaleSayDay5() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 08:59:59:000");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertNotEquals("It's not a day it's can be morning", bundleRU.getString(DAY),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    //Evening
+     @Test
+    public void testRuLocaleSayEvening() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 22:59:59:999");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertEquals("The evening greeting with Ru locale must equals", bundleRU.getString(EVANING),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    
+    @Test
+    public void testRuLocaleSayEvening2() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 19:00:00:000");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertEquals("The evening greeting with Ru locale must equals", bundleRU.getString(EVANING),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    
+    @Test
+    public void testRuLocaleSayEvening3() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 23:00:00:000");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertNotEquals("It's not a evening greeting it's must be night", bundleRU.getString(EVANING),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+        assertEquals("It must be night", bundleRU.getString(NIGHT),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    
+    @Test
+    public void testRuLocaleSayEvening4() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 19:03:15:419");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertEquals("The evening greeting with Ru locale must equals", bundleRU.getString(EVANING),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    
+    @Test
+    public void testRuLocaleSayEvening5() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 18:59:59:000");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertNotEquals("It's not a evening it's can be day", bundleRU.getString(EVANING),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    //Night
+    @Test
+    public void testRuLocaleSayNight() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 05:59:59:000");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertEquals("The night greeting with Ru locale must equals", bundleRU.getString(NIGHT),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    @Test
+    public void testRuLocaleSayNight2() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 23:00:00:000");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertEquals("The night greeting with Ru locale must equals", bundleRU.getString(NIGHT),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    
+    @Test
+    public void testRuLocaleSayNight3() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 06:00:00:000");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertNotEquals("It's not a night greeting it's must be morning", bundleRU.getString(NIGHT),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+        assertEquals("It must be night", bundleRU.getString(MORNING),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    
+    @Test
+    public void testRuLocaleSayNight4() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 04:23:15:784");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertEquals("The night greeting with Ru locale must equals", bundleRU.getString(NIGHT),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    
+    @Test
+    public void testRuLocaleSayNight5() throws ParseException{
+        Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 22:59:59:000");
+        new LocaleGreeting(bundleRU).sayGreeting(testDate);
+        assertNotEquals("It's not a night it's can be evening", bundleRU.getString(NIGHT),
+                new LocaleGreeting(bundleRU).sayGreeting(testDate));
+    }
+    //Compare Ru,UA, Uk locale greetings
+    @Test
+    public void testCompareEnRuUaProper(){
+        assertNotEquals("Ua greetings and Ru greetings can't equals", bundleRU.getString(MORNING),
+                bundleUA.getString(MORNING));
+        assertNotEquals("Ua greetings and Ru greetings can't equals", bundleRU.getString(DAY),
+                bundleUA.getString(DAY));
+        assertNotEquals("Ua greetings and Ru greetings can't equals", bundleRU.getString(EVANING),
+                bundleUA.getString(EVANING));
+        assertNotEquals("Ua greetings and Ru greetings can't equals", bundleRU.getString(NIGHT),
+                bundleUA.getString(NIGHT));
+
+        
+        assertNotEquals("Uk greetings and Ru greetings can't equals", bundleRU.getString(MORNING),
+                bundleUK.getString(MORNING));
+        assertNotEquals("Uk greetings and Ru greetings can't equals", bundleRU.getString(DAY),
+                bundleUK.getString(DAY));
+        assertNotEquals("Uk greetings and Ru greetings can't equals", bundleRU.getString(EVANING),
+                bundleUK.getString(EVANING));
+        assertNotEquals("Uk greetings and Ru greetings can't equals", bundleRU.getString(NIGHT),
+                bundleUK.getString(NIGHT));
+    }
+    @Test
+    public void testSetterResourceBundle(){
+        Date curdate = new Date();
+        LocaleGreeting lg = new LocaleGreeting(bundleRU);
+        String ruGreeting = lg.sayGreeting(curdate);
+        lg.setResourceBundle(bundleUK);
+        assertNotEquals("Greeting after set parameter must'n be same", ruGreeting,
+                lg.sayGreeting(curdate));
+    }
 }

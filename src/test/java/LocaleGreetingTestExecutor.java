@@ -16,7 +16,6 @@ public class LocaleGreetingTestExecutor {
         Logger logger = LocaleGreetingTest.logger;
         logger.info("--------------------------------Start-----------------------------------");
         JUnitCore runner = new JUnitCore();
-        //runner.addListener(new RunListener());
         runner.addListener(new ExecutionListener());
         Result result = runner.run(LocaleGreetingTest.class);
         logger.info("-------------------------------Summary----------------------------------");
