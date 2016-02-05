@@ -5,7 +5,7 @@
  */
 package com.greetings;
 
-import static com.greetings.PropertieKeys.*;
+import static com.greetings.PropertiesKeys.*;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -33,13 +33,13 @@ public class LocaleGreeting {
         }
         TimeConstants tc = new TimeConstants(curDate);
         if (curDate.after(tc.BEFORE_SIX) && curDate.before(tc.NINE)) {//06:00 - 09:00
-            return resourceBundle.getString(MORNING);
+            return resourceBundle.getString(MORNING.toString());
         } else if (curDate.after(tc.BEFORE_NINE) && curDate.before(tc.NINETEEN)) {//09:00 - 19:00
-            return resourceBundle.getString(DAY);
+            return resourceBundle.getString(DAY.toString());
         } else if (curDate.after(tc.BEFORE_NINETEEN) && curDate.before(tc.TWENTY_THREE)) {//19:00 - 23:00
-            return resourceBundle.getString(EVANING);
+            return resourceBundle.getString(EVANING.toString());
         } else{ //23:00 - 06:00
-            return resourceBundle.getString(NIGHT);
+            return resourceBundle.getString(NIGHT.toString());
         }
     }
 

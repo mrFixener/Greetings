@@ -5,7 +5,7 @@
  */
 package com.greetings;
 
-import static com.greetings.PropertieKeys.LOCALE_FILE;
+import static com.greetings.PropertiesKeys.LOCALE_FILE;
 import java.util.Date;
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
 public class Main {
     public static void main(String[] args) {
         try {
-            ResourceBundle bundle = ResourceBundle.getBundle(LOCALE_FILE, Locale.getDefault());
+            ResourceBundle bundle = ResourceBundle.getBundle(LOCALE_FILE.toString(), Locale.getDefault());
             System.out.println(new LocaleGreeting(bundle).sayGreeting(new Date()));
         } catch (Exception ex) {
             ex.printStackTrace();

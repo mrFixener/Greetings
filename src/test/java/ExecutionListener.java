@@ -15,13 +15,13 @@ import org.junit.runner.notification.RunListener;
  * @author sdj
  */
 public class ExecutionListener extends RunListener {
-
-    private static Logger logger = LocaleGreetingTest.logger;
+    private static final Logger logger = LocaleGreetingTest.logger;
 
     /**
      * Called before any tests have been run.
 	 *
      */
+    @Override
     public void testRunStarted(Description description) throws java.lang.Exception {
         logger.info("Number of testcases to execute : " + description.testCount());
     }
@@ -30,6 +30,7 @@ public class ExecutionListener extends RunListener {
      * Called when all tests have finished
 	 *
      */
+    @Override
     public void testRunFinished(Result result) throws java.lang.Exception {
         logger.info("Number of testcases executed : " + result.getRunCount());
     }
@@ -38,6 +39,7 @@ public class ExecutionListener extends RunListener {
      * Called when an atomic test is about to be started.
 	 *
      */
+    @Override
     public void testStarted(Description description) throws java.lang.Exception {
         logger.info("Starting execution of test case : " + description.getMethodName());
     }
@@ -47,6 +49,7 @@ public class ExecutionListener extends RunListener {
      * fails.
 	 *
      */
+    @Override
     public void testFinished(Description description) throws java.lang.Exception {
         logger.info("Finished execution of test case : " + description.getMethodName());
     }
@@ -55,6 +58,7 @@ public class ExecutionListener extends RunListener {
      * Called when an atomic test fails.
 	 *
      */
+    @Override
     public void testFailure(Failure failure) throws java.lang.Exception {
         logger.info("Execution of test case failed : " + failure.getMessage());
     }
@@ -64,6 +68,7 @@ public class ExecutionListener extends RunListener {
      * annotated with Ignore.
 	 *
      */
+    @Override
     public void testIgnored(Description description) throws java.lang.Exception {
         logger.info("Execution of test case ignored : " + description.getMethodName());
     }

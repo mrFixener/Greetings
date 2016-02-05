@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.28" errors="0" skipped="0" tests="21" name="LocaleGreetingTest">
+<testsuite failures="0" time="0.265" errors="0" skipped="0" tests="21" name="LocaleGreetingTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_25\jre\bin"/>
@@ -63,25 +63,25 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="0.02" classname="LocaleGreetingTest" name="testRuLocaleSayMorning2"/>
+  <testcase time="0.031" classname="LocaleGreetingTest" name="testRuLocaleSayMorning2"/>
   <testcase time="0" classname="LocaleGreetingTest" name="testRuLocaleSayMorning3"/>
-  <testcase time="0.01" classname="LocaleGreetingTest" name="testRuLocaleSayEvening2"/>
+  <testcase time="0" classname="LocaleGreetingTest" name="testRuLocaleSayEvening2"/>
   <testcase time="0" classname="LocaleGreetingTest" name="testRuLocaleSayEvening3"/>
-  <testcase time="0.01" classname="LocaleGreetingTest" name="testRuLocaleSayEvening4"/>
+  <testcase time="0.016" classname="LocaleGreetingTest" name="testRuLocaleSayEvening4"/>
   <testcase time="0" classname="LocaleGreetingTest" name="testRuLocaleSayEvening5"/>
   <testcase time="0" classname="LocaleGreetingTest" name="testIllegalArgumentException"/>
-  <testcase time="0.01" classname="LocaleGreetingTest" name="testRuLocaleSayMorning"/>
-  <testcase time="0" classname="LocaleGreetingTest" name="testRuLocaleSayDay2"/>
+  <testcase time="0" classname="LocaleGreetingTest" name="testRuLocaleSayMorning"/>
+  <testcase time="0.015" classname="LocaleGreetingTest" name="testRuLocaleSayDay2"/>
   <testcase time="0" classname="LocaleGreetingTest" name="testRuLocaleSayDay3"/>
-  <testcase time="0.01" classname="LocaleGreetingTest" name="testRuLocaleSayDay4"/>
-  <testcase time="0" classname="LocaleGreetingTest" name="testRuLocaleSayDay5"/>
+  <testcase time="0" classname="LocaleGreetingTest" name="testRuLocaleSayDay4"/>
+  <testcase time="0.016" classname="LocaleGreetingTest" name="testRuLocaleSayDay5"/>
   <testcase time="0" classname="LocaleGreetingTest" name="testRuLocaleSayDay"/>
-  <testcase time="0.01" classname="LocaleGreetingTest" name="testSetterResourceBundle"/>
+  <testcase time="0" classname="LocaleGreetingTest" name="testSetterResourceBundle"/>
   <testcase time="0" classname="LocaleGreetingTest" name="testRuLocaleSayEvening"/>
-  <testcase time="0.01" classname="LocaleGreetingTest" name="testRuLocaleSayNight"/>
+  <testcase time="0" classname="LocaleGreetingTest" name="testRuLocaleSayNight"/>
   <testcase time="0" classname="LocaleGreetingTest" name="testCompareEnRuUaProper"/>
   <testcase time="0" classname="LocaleGreetingTest" name="testRuLocaleSayNight2"/>
   <testcase time="0" classname="LocaleGreetingTest" name="testRuLocaleSayNight3"/>
-  <testcase time="0.01" classname="LocaleGreetingTest" name="testRuLocaleSayNight4"/>
+  <testcase time="0" classname="LocaleGreetingTest" name="testRuLocaleSayNight4"/>
   <testcase time="0" classname="LocaleGreetingTest" name="testRuLocaleSayNight5"/>
 </testsuite>

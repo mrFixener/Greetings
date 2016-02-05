@@ -98,3 +98,54 @@
 2016-02-04 17:15:48,665 - LocaleGreetingTest - INFO - Ignored tests: 0
 2016-02-04 17:15:48,665 - LocaleGreetingTest - INFO - Success: true
 2016-02-04 17:15:48,665 - LocaleGreetingTest - INFO - ---------------------------------END------------------------------------
+2016-02-05 15:32:15,619 - LocaleGreetingTest - INFO - --------------------------------Start-----------------------------------
+2016-02-05 15:32:15,713 - LocaleGreetingTest - INFO - Number of testcases to execute : 21
+2016-02-05 15:32:15,728 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayMorning2
+2016-02-05 15:32:15,744 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayMorning2
+2016-02-05 15:32:15,744 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayMorning3
+2016-02-05 15:32:15,744 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayMorning3
+2016-02-05 15:32:15,744 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayEvening2
+2016-02-05 15:32:15,744 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayEvening2
+2016-02-05 15:32:15,744 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayEvening3
+2016-02-05 15:32:15,760 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayEvening3
+2016-02-05 15:32:15,760 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayEvening4
+2016-02-05 15:32:15,760 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayEvening4
+2016-02-05 15:32:15,760 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayEvening5
+2016-02-05 15:32:15,760 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayEvening5
+2016-02-05 15:32:15,760 - LocaleGreetingTest - INFO - Starting execution of test case : testIllegalArgumentException
+2016-02-05 15:32:15,760 - LocaleGreetingTest - INFO - Finished execution of test case : testIllegalArgumentException
+2016-02-05 15:32:15,760 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayMorning
+2016-02-05 15:32:15,760 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayMorning
+2016-02-05 15:32:15,775 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayDay2
+2016-02-05 15:32:15,775 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayDay2
+2016-02-05 15:32:15,775 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayDay3
+2016-02-05 15:32:15,775 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayDay3
+2016-02-05 15:32:15,775 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayDay4
+2016-02-05 15:32:15,775 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayDay4
+2016-02-05 15:32:15,775 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayDay5
+2016-02-05 15:32:15,775 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayDay5
+2016-02-05 15:32:15,775 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayDay
+2016-02-05 15:32:15,791 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayDay
+2016-02-05 15:32:15,791 - LocaleGreetingTest - INFO - Starting execution of test case : testSetterResourceBundle
+2016-02-05 15:32:15,791 - LocaleGreetingTest - INFO - Finished execution of test case : testSetterResourceBundle
+2016-02-05 15:32:15,791 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayEvening
+2016-02-05 15:32:15,791 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayEvening
+2016-02-05 15:32:15,791 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayNight
+2016-02-05 15:32:15,806 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayNight
+2016-02-05 15:32:15,806 - LocaleGreetingTest - INFO - Starting execution of test case : testCompareEnRuUaProper
+2016-02-05 15:32:15,806 - LocaleGreetingTest - INFO - Finished execution of test case : testCompareEnRuUaProper
+2016-02-05 15:32:15,806 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayNight2
+2016-02-05 15:32:15,806 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayNight2
+2016-02-05 15:32:15,806 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayNight3
+2016-02-05 15:32:15,806 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayNight3
+2016-02-05 15:32:15,806 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayNight4
+2016-02-05 15:32:15,806 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayNight4
+2016-02-05 15:32:15,806 - LocaleGreetingTest - INFO - Starting execution of test case : testRuLocaleSayNight5
+2016-02-05 15:32:15,822 - LocaleGreetingTest - INFO - Finished execution of test case : testRuLocaleSayNight5
+2016-02-05 15:32:15,822 - LocaleGreetingTest - INFO - Number of testcases executed : 21
+2016-02-05 15:32:15,822 - LocaleGreetingTest - INFO - -------------------------------Summary----------------------------------
+2016-02-05 15:32:15,822 - LocaleGreetingTest - INFO - Run tests: 21
+2016-02-05 15:32:15,822 - LocaleGreetingTest - INFO - Failed tests: 0
+2016-02-05 15:32:15,822 - LocaleGreetingTest - INFO - Ignored tests: 0
+2016-02-05 15:32:15,822 - LocaleGreetingTest - INFO - Success: true
+2016-02-05 15:32:15,822 - LocaleGreetingTest - INFO - ---------------------------------END------------------------------------

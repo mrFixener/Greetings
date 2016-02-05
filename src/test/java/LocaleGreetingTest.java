@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 import com.greetings.LocaleGreeting;
-import static com.greetings.PropertieKeys.*;
+import static com.greetings.PropertiesKeys.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -32,12 +32,12 @@ public class LocaleGreetingTest {
     @Before
     public void setUp() {
         Locale locale = new Locale("ru", "RU");
-        bundleRU = ResourceBundle.getBundle(LOCALE_FILE, locale);
+        bundleRU = ResourceBundle.getBundle(LOCALE_FILE.toString(), locale);
         locale = new Locale("ua", "UA");
-        bundleUA = ResourceBundle.getBundle(LOCALE_FILE, locale);
+        bundleUA = ResourceBundle.getBundle(LOCALE_FILE.toString(), locale);
 
         locale = new Locale("en", "UK");
-        bundleUK = ResourceBundle.getBundle(LOCALE_FILE, locale);
+        bundleUK = ResourceBundle.getBundle(LOCALE_FILE.toString(), locale);
     }
 
     @After
@@ -51,21 +51,21 @@ public class LocaleGreetingTest {
     public void testRuLocaleSayMorning() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 06:00:00:000");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertEquals("The morning greeting with Ru locale must equals", bundleRU.getString(MORNING),
+        assertEquals("The morning greeting with Ru locale must equals", bundleRU.getString(MORNING.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     @Test
     public void testRuLocaleSayMorning2() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 09:00:00:000");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertNotEquals("It's not a morning greeting it's must be day", bundleRU.getString(MORNING),
+        assertNotEquals("It's not a morning greeting it's must be day", bundleRU.getString(MORNING.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     @Test
     public void testRuLocaleSayMorning3() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 08:59:59:999");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertEquals("The morning greeting with Ru locale must equals", bundleRU.getString(MORNING),
+        assertEquals("The morning greeting with Ru locale must equals", bundleRU.getString(MORNING.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     //Day
@@ -73,7 +73,7 @@ public class LocaleGreetingTest {
     public void testRuLocaleSayDay() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 18:59:59:999");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertEquals("The day greeting with Ru locale must equals", bundleRU.getString(DAY),
+        assertEquals("The day greeting with Ru locale must equals", bundleRU.getString(DAY.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     
@@ -81,7 +81,7 @@ public class LocaleGreetingTest {
     public void testRuLocaleSayDay2() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 09:00:00:000");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertEquals("The day greeting with Ru locale must equals", bundleRU.getString(DAY),
+        assertEquals("The day greeting with Ru locale must equals", bundleRU.getString(DAY.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     
@@ -89,9 +89,9 @@ public class LocaleGreetingTest {
     public void testRuLocaleSayDay3() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 19:00:00:000");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertNotEquals("It's not a day greeting it's must be evening", bundleRU.getString(DAY),
+        assertNotEquals("It's not a day greeting it's must be evening", bundleRU.getString(DAY.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
-        assertEquals("It must be evening", bundleRU.getString(EVANING),
+        assertEquals("It must be evening", bundleRU.getString(EVANING.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     
@@ -99,7 +99,7 @@ public class LocaleGreetingTest {
     public void testRuLocaleSayDay4() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 17:03:15:419");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertEquals("The day greeting with Ru locale must equals", bundleRU.getString(DAY),
+        assertEquals("The day greeting with Ru locale must equals", bundleRU.getString(DAY.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     
@@ -107,7 +107,7 @@ public class LocaleGreetingTest {
     public void testRuLocaleSayDay5() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 08:59:59:000");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertNotEquals("It's not a day it's can be morning", bundleRU.getString(DAY),
+        assertNotEquals("It's not a day it's can be morning", bundleRU.getString(DAY.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     //Evening
@@ -115,7 +115,7 @@ public class LocaleGreetingTest {
     public void testRuLocaleSayEvening() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 22:59:59:999");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertEquals("The evening greeting with Ru locale must equals", bundleRU.getString(EVANING),
+        assertEquals("The evening greeting with Ru locale must equals", bundleRU.getString(EVANING.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     
@@ -123,7 +123,7 @@ public class LocaleGreetingTest {
     public void testRuLocaleSayEvening2() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 19:00:00:000");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertEquals("The evening greeting with Ru locale must equals", bundleRU.getString(EVANING),
+        assertEquals("The evening greeting with Ru locale must equals", bundleRU.getString(EVANING.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     
@@ -131,9 +131,9 @@ public class LocaleGreetingTest {
     public void testRuLocaleSayEvening3() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 23:00:00:000");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertNotEquals("It's not a evening greeting it's must be night", bundleRU.getString(EVANING),
+        assertNotEquals("It's not a evening greeting it's must be night", bundleRU.getString(EVANING.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
-        assertEquals("It must be night", bundleRU.getString(NIGHT),
+        assertEquals("It must be night", bundleRU.getString(NIGHT.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     
@@ -141,7 +141,7 @@ public class LocaleGreetingTest {
     public void testRuLocaleSayEvening4() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 19:03:15:419");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertEquals("The evening greeting with Ru locale must equals", bundleRU.getString(EVANING),
+        assertEquals("The evening greeting with Ru locale must equals", bundleRU.getString(EVANING.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     
@@ -149,7 +149,7 @@ public class LocaleGreetingTest {
     public void testRuLocaleSayEvening5() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 18:59:59:000");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertNotEquals("It's not a evening it's can be day", bundleRU.getString(EVANING),
+        assertNotEquals("It's not a evening it's can be day", bundleRU.getString(EVANING.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     //Night
@@ -157,14 +157,14 @@ public class LocaleGreetingTest {
     public void testRuLocaleSayNight() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 05:59:59:000");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertEquals("The night greeting with Ru locale must equals", bundleRU.getString(NIGHT),
+        assertEquals("The night greeting with Ru locale must equals", bundleRU.getString(NIGHT.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     @Test
     public void testRuLocaleSayNight2() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 23:00:00:000");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertEquals("The night greeting with Ru locale must equals", bundleRU.getString(NIGHT),
+        assertEquals("The night greeting with Ru locale must equals", bundleRU.getString(NIGHT.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     
@@ -172,9 +172,9 @@ public class LocaleGreetingTest {
     public void testRuLocaleSayNight3() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 06:00:00:000");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertNotEquals("It's not a night greeting it's must be morning", bundleRU.getString(NIGHT),
+        assertNotEquals("It's not a night greeting it's must be morning", bundleRU.getString(NIGHT.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
-        assertEquals("It must be night", bundleRU.getString(MORNING),
+        assertEquals("It must be night", bundleRU.getString(MORNING.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     
@@ -182,7 +182,7 @@ public class LocaleGreetingTest {
     public void testRuLocaleSayNight4() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 04:23:15:784");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertEquals("The night greeting with Ru locale must equals", bundleRU.getString(NIGHT),
+        assertEquals("The night greeting with Ru locale must equals", bundleRU.getString(NIGHT.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     
@@ -190,30 +190,30 @@ public class LocaleGreetingTest {
     public void testRuLocaleSayNight5() throws ParseException{
         Date testDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").parse("2016-02-03 22:59:59:000");
         new LocaleGreeting(bundleRU).sayGreeting(testDate);
-        assertNotEquals("It's not a night it's can be evening", bundleRU.getString(NIGHT),
+        assertNotEquals("It's not a night it's can be evening", bundleRU.getString(NIGHT.toString()),
                 new LocaleGreeting(bundleRU).sayGreeting(testDate));
     }
     //Compare Ru,UA, Uk locale greetings
     @Test
     public void testCompareEnRuUaProper(){
-        assertNotEquals("Ua greetings and Ru greetings can't equals", bundleRU.getString(MORNING),
-                bundleUA.getString(MORNING));
-        assertNotEquals("Ua greetings and Ru greetings can't equals", bundleRU.getString(DAY),
-                bundleUA.getString(DAY));
-        assertNotEquals("Ua greetings and Ru greetings can't equals", bundleRU.getString(EVANING),
-                bundleUA.getString(EVANING));
-        assertNotEquals("Ua greetings and Ru greetings can't equals", bundleRU.getString(NIGHT),
-                bundleUA.getString(NIGHT));
+        assertNotEquals("Ua greetings and Ru greetings can't equals", bundleRU.getString(MORNING.toString()),
+                bundleUA.getString(MORNING.toString()));
+        assertNotEquals("Ua greetings and Ru greetings can't equals", bundleRU.getString(DAY.toString()),
+                bundleUA.getString(DAY.toString()));
+        assertNotEquals("Ua greetings and Ru greetings can't equals", bundleRU.getString(EVANING.toString()),
+                bundleUA.getString(EVANING.toString()));
+        assertNotEquals("Ua greetings and Ru greetings can't equals", bundleRU.getString(NIGHT.toString()),
+                bundleUA.getString(NIGHT.toString()));
 
         
-        assertNotEquals("Uk greetings and Ru greetings can't equals", bundleRU.getString(MORNING),
-                bundleUK.getString(MORNING));
-        assertNotEquals("Uk greetings and Ru greetings can't equals", bundleRU.getString(DAY),
-                bundleUK.getString(DAY));
-        assertNotEquals("Uk greetings and Ru greetings can't equals", bundleRU.getString(EVANING),
-                bundleUK.getString(EVANING));
-        assertNotEquals("Uk greetings and Ru greetings can't equals", bundleRU.getString(NIGHT),
-                bundleUK.getString(NIGHT));
+        assertNotEquals("Uk greetings and Ru greetings can't equals", bundleRU.getString(MORNING.toString()),
+                bundleUK.getString(MORNING.toString()));
+        assertNotEquals("Uk greetings and Ru greetings can't equals", bundleRU.getString(DAY.toString()),
+                bundleUK.getString(DAY.toString()));
+        assertNotEquals("Uk greetings and Ru greetings can't equals", bundleRU.getString(EVANING.toString()),
+                bundleUK.getString(EVANING.toString()));
+        assertNotEquals("Uk greetings and Ru greetings can't equals", bundleRU.getString(NIGHT.toString()),
+                bundleUK.getString(NIGHT.toString()));
     }
     @Test
     public void testSetterResourceBundle(){
